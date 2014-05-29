@@ -1,5 +1,5 @@
-DistributedFileStore
-=======================
+Distributed File Store
+======================
 
 Demonstration of distributed hash table concepts for CS-343 at Willamette University
 

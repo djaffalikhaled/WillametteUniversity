@@ -1,5 +1,5 @@
-board-game-simulator
-===================
+Hexapawn
+========
 
 Ruby implementation of an any sized hexapawn style game, including a minimaxer and rote learning computer players.  This is our solution for a lab in Machine Learning, CS-448 at Willamette University.  Uploaded with permission by Associate Professor Jim Levenick.
 
