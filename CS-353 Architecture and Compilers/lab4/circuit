@@ -1,0 +1,3 @@
+xnor a1 s1 s3
+xnor a2 s2 s4
+and l1 a1 a2

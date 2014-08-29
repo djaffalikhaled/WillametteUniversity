@@ -1,0 +1,10 @@
+xor a1 s1 on
+xor l2 s1 s2
+and a3 s2 s3
+not a4 a1
+and a5 s1 s2
+xor l3 s3 a5
+and a7 s3 a3
+and a8 a4 a7
+or l4 s4 a8
+light l1 a1
