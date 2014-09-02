@@ -52,11 +52,11 @@ int main()
     Vector3D vec4 = vec3*2;
     cout << "\tCreated vec4: (" << vec4.x << ", " << vec4.y << ", " << vec4.z << ")\n";
     cout << "\tDoing cross product...\n";
-    Vector3D vec5 = vec4^vec5;
+    Vector3D vec5 = vec2^vec3;
     cout << "\tCreated vec5: (" << vec5.x << ", " << vec5.y << ", " << vec5.z << ")\n";
     cout << "\tDoing dot product...\n";
-    Vector3D vec6 = vec4*vec3;
-    cout << "\tCreated vec6: (" << vec6.x << ", " << vec6.y << ", " << vec6.z << ")\n";
+    double vec6 = vec4*vec3;
+    cout << "\tCreated vec6: " << vec6 << "\n";
     return 0;
 }
 
