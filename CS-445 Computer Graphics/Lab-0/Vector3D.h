@@ -100,8 +100,8 @@ Vector3D::operator* (const Vector3D& b) const {
 inline Vector3D
 Vector3D::operator^ (const Vector3D& v) const {
 	return Vector3D(((y*v.z)-(v.y*z)),
-					((z*v.x)-(v.z*x)),
-					((x*v.y)-(v.x*y)));
+			((z*v.x)-(v.z*x)),
+			((x*v.y)-(v.x*y)));
 }
 
 // ---------------------------------------------------------------------  operator+=

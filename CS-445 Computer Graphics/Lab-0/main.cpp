@@ -7,20 +7,20 @@ using namespace std;
 
 int main()
 {
-	cout << "   _____                 _     _          \n";
-	cout << "  / ____|               | |   (_)         \n";
-	cout << " | |  __ _ __ __ _ _ __ | |__  _  ___ ___ \n";
-	cout << " | | |_ | '__/ _` | '_ \\| '_ \\| |/ __/ __|\n";
-	cout << " | |__| | | | (_| | |_) | | | | | (__\\__ \\\n";
-	cout << "  \\_____|_|  \\__,_| .__/|_| |_|_|\\___|___/\n";
-	cout << "                  | |                     \n";
-	cout << "                  |_|                     \n";
-	cout << "Lab 0 demo program! -Hayden Parker\n";
-	cout << "\n";
+    cout << "   _____                 _     _          \n";
+    cout << "  / ____|               | |   (_)         \n";
+    cout << " | |  __ _ __ __ _ _ __ | |__  _  ___ ___ \n";
+    cout << " | | |_ | '__/ _` | '_ \\| '_ \\| |/ __/ __|\n";
+    cout << " | |__| | | | (_| | |_) | | | | | (__\\__ \\\n";
+    cout << "  \\_____|_|  \\__,_| .__/|_| |_|_|\\___|___/\n";
+    cout << "                  | |                     \n";
+    cout << "                  |_|                     \n";
+    cout << "Lab 0 demo program! -Hayden Parker\n";
+    cout << "\n";
 	
-	// RGBColor examples
-	cout << "Doing RGBColor examples...\n";
-	cout << "\tCreating RGBColor with no args...\n";
+    // RGBColor examples
+    cout << "Doing RGBColor examples...\n";
+    cout << "\tCreating RGBColor with no args...\n";
     RGBColor c1;
     cout << "\tCreating RGBCOlor with one args...\n";
     RGBColor c2(.2);
@@ -33,13 +33,13 @@ int main()
     c1 = c1.powc(2.0);
     cout << "\tResults: " << "c1^2 = " << c1 << "\n";
     
-	// Vector examples
-	cout << "Doing Vector3D examples...\n";
-	cout << "\tCreating Vector3D with no args...\n";
+    // Vector examples
+    cout << "Doing Vector3D examples...\n";
+    cout << "\tCreating Vector3D with no args...\n";
     Vector3D vec1();
-	cout << "\tCreating Vector3D with 1 arg...\n";
+    cout << "\tCreating Vector3D with 1 arg...\n";
     Vector3D vec2(1);
-	cout << "\tCreating Vector3D with 3 args...\n";
+    cout << "\tCreating Vector3D with 3 args...\n";
     Vector3D vec3(1,2,3);
     cout << "\tCalling .length on vec3...\n";
     cout << "\tvec3.length(): " << vec3.length() << "\n";
