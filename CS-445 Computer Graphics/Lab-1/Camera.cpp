@@ -77,7 +77,10 @@ Camera::calcUVN(const Vector3D &VPN, const Vector3D &VUP) {
 // i is the index along x (column) and j is the index along y (row)
 Ray
 Camera::pixRay(int i, int j) const {
-     Vector3D dir;
+
+     Vector3D P1((-(w/2)+(w*i)/(xres-1)), ((-h/2)+(h*j)/(yres-1)), -d);
+     Vector3D dir(P1-loc);
+     dir.normalize();
      // ************************ PART 1:  NEED TO CALCULATE dir
      // See formulas in ray tracing notes at the very end of section 2.  dir = P1-P0.
      // For Part 1, we use the default values of loc  and u v n, but make sure this

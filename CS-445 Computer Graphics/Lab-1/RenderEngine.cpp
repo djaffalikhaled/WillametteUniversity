@@ -46,6 +46,16 @@ RenderEngine::render_scene()
     RGBColor pixel_color;
 
     // PART 1:
+    for (int row=0; row < camera->xres; row++){
+        for (int col=0; col< camera->yres; col++){
+            Ray curRay = camera->pixRay(row, col);
+            pixel_color = trace_ray(curRay, world_ptr->depth);
+            int index = col * 3 * camera->xres + row*3 ;
+            camera->image[index]   = pixel_color.r;
+            camera->image[index+1] = pixel_color.g;
+            camera->image[index+2] = pixel_color.b;
+        }
+    }
     // Loop over rows and columns of images (pixels)
         // Compute the ray from camera to the given pixel (see function in Camera class)
         // trace the ray to get pixel_color (i.e. call trace_ray)
@@ -86,7 +96,13 @@ RenderEngine::trace_ray(const Ray& ray, int rayDepth)
             // and set pixel color:
             //        pixel_color = world_ptr->objects[j]->color; // only used until lights and materials are implemented
 
-
+    for (int i = 0; i<num_objects; i++){
+        ShadeRec srObject = world_ptr->objects[i]->hit(ray);
+        if (srObject.t < sr.t && srObject.hit_an_object){
+                sr = srObject;
+                pixel_color = world_ptr->objects[i]->color;
+            }
+    }
     // Now, check to see if there has been a hit.  If so, sr should contain the information
     // about the closest hit. Use the pixel_color above and sr to determine the final pixel color.
     //  (Nothing to do below here for PART 1 since we aren't implementing shading yet.
