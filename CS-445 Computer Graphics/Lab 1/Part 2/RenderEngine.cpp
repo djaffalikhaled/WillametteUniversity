@@ -153,7 +153,7 @@ RenderEngine::calc_shade(const Ray& ray, ShadeRec& sr)
         Vector3D ndir = sr.normal;
         ndir.normalize();
 
-        if (!(vdir*ndir<0)) {
+        if (!(ldir*ndir<0)) {
             RGBColor diffuse = m_ptr->kd* m_ptr->cd * light->intensity * light->color * (ldir*ndir);
             Vector3D reflect = 2*(ldir*ndir)*ndir-ldir;
             reflect.normalize();

@@ -23,6 +23,11 @@ World::build(void)
     sphere_ptr = new Sphere(Vector3D(-2, 0, -40), 2);
     sphere_ptr->color = RGBColor(1,0,1);
     add_object(sphere_ptr);
+
+    sphere_ptr = new Sphere(Vector3D(-2, 5, -70), 5);
+    sphere_ptr->color = RGBColor(0.5,0,1);
+    add_object(sphere_ptr);
+
 }
 
 // -------------------------------------------------------------------- default constructor
