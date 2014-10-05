@@ -67,7 +67,7 @@ Cylinder::hit(const Ray& ray) const
     double 		t;
     Vector3D	myO 	     (ray.o.x, 0,  ray.o.z);
     Vector3D 	myD	     (ray.d.x, 0, ray.d.z);
-    Vector3D 	myCenter 	 (center.x, 0, center.z);
+    Vector3D 	diffCenter 	 (center.x, 0, center.z);
     Vector3D 	temp 	=	 myO - myCenter;
     double 		a 		= myD * myD;
     double 		b 		= 2.0 * temp * myD;
